@@ -1,4 +1,3 @@
----
 collections:
   - name: community.general
   - name: ansible.posix
@@ -9,3 +8,14 @@ roles:
     src: git+https://github.com/InvalidIdentifier/ansible-role-docker-common-setup.git
     version: main
     scm: git
+  - name: docker_common_services
+    src: git+https://github.com/InvalidIdentifier/ansible-role-docker-common-services.git
+    version: main
+    scm: git
+  - name: docker_infra_node
+    src: git+https://github.com/InvalidIdentifier/ansible-role-docker-infra-node.git
+    version: main
+    scm: git
+  - name: docker_service_node
+    src: git+https://github.com/InvalidIdentifier/ansible-role-docker-service-node.git
+    version: main
