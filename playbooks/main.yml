@@ -12,3 +12,10 @@
   roles:
     - docker_infra_node
     - docker_common_services
+
+- name: configure docker service node
+  hosts: node122
+  become: true
+  roles:
+    - docker_service_node
+    - docker_common_services
