@@ -17,7 +17,7 @@ roles:
     version: main
     scm: git
   - name: docker_service_node
-    src: git+https://github.com/InvalidIdentifier/ansible-role-docker-service-node.git
+    src: git+https://github.com/InvalidIdentifier/ansible-role-docker-node.git
     version: main
   - name: docker_dmz_proxy
     src: git+https://github.com/InvalidIdentifier/ansible-role-dmz-proxy.git
