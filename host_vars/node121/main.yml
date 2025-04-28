@@ -1,4 +1,17 @@
+trusted_ips_list:
+  - 127.0.0.1/32
+  - "{{ lookup('env', 'VLAN_INFRA') }}.100/32"
 traefik_entrypoints:
+  http:
+    port: 80
+    trusted_ips: "{{ trusted_ips_list }}"
+  https:
+    port: 443
+    trusted_ips: "{{ trusted_ips_list }}"
+  nodeexporter:
+    port: 9100
+  cadvisor:
+    port: 8080
   prometheus:
     port: 9090
   loki:
