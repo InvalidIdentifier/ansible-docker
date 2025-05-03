@@ -1,0 +1,18 @@
+trusted_ips_list:
+  - 127.0.0.1/32
+  - "{{ lookup('env', 'VLAN_INFRA') }}.100/32"
+traefik_entrypoints:
+  http:
+    port: 80
+    trusted_ips: "{{ trusted_ips_list }}"
+  https:
+    port: 443
+    trusted_ips: "{{ trusted_ips_list }}"
+  nodeexporter:
+    port: 9100
+  idp:
+    port: 9000
+traefik_ports:
+  - "9000:9000"
+web_user: "{{ lookup('env', 'WEBSITE_USER') }}"
+web_access_code: "{{ lookup('env', 'WEBSITE_ACCESS_CODE') }}"
